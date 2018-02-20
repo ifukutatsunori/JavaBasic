@@ -35,6 +35,18 @@ public class PTra03_08 {
 		 *
 		 * ※ プログラムは何行書いても良いです
 		 */
-
-	}
+		switch (num) {
+		case 1:
+			System.out.println(850);
+			break;
+		case 2:
+			System.out.println(840);
+			break;
+		case 3:
+			System.out.println(800);
+			break;
+			default://1~3以外の数値を入力し何も購入しなかった場合
+				System.out.println(1000);
+		}
+		}
 }
