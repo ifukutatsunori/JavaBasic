@@ -7,7 +7,6 @@ package practice10;
  */
 
 public class PTra10_05 {
-
 	/*
 	 * 以下の仕様のクラスを作成してください（新しくJavaファイルを作成してください）
 	 *
@@ -25,18 +24,22 @@ public class PTra10_05 {
 
 	public static void main(String[] args) {
 
+
 		// Carクラスを作成後に着手してください
 		// ★ Car型の変数carを宣言し、Carクラスのインスタンスを代入してください
+		Car car=new Car();
 
 
 		// ★ 変数carに格納されているインスタンスのserialNoフィールドに、10000を代入してください
+		car.seriaNo=10000;
 
 
 		// ★ 変数carに格納されているインスタンスのcolorフィールドに、"Red"を代入してください
+		car.color="red";
 
 
 		// ★ 変数carに格納されているインスタンスのgasolineフィールドに、50を代入してください
-
+		car.gasoline=50;
 
 		// 目的地までの距離
 		final int distance = 300;
@@ -47,6 +50,27 @@ public class PTra10_05 {
 		 * ★ 目的地についた時点で「目的地にまでn時間かかりました。残りのガソリンは、xリットルです」を出力してください
 		 * ※n：runメソッドを実行した回数, xは残りのガソリンの数です
 		 */
+		int sum=0;
+		int n=0;
 
+		while(true) {
+			int go = car.run();
+			n++;
+			sum+=go;
+			System.out.println(sum);
+
+			if(go==-1) {
+				System.out.println("目的地に到着できませんでした");
+				break;
+			}
+
+
+
+		if(sum>distance) {
+				System.out.println("目的地にまで"+n+"時間かかりました。残りのガソリンは、"+car.gasoline+"リットルです");
+			break;
+
+			}
+		}
 	}
 }

@@ -24,13 +24,12 @@ public class Book {
 	 * @param publication	出版社
 	 */
 	Book(String title, String author, int price, int pageSize, String publication) {
-		this.title = title;
-		this.author = author;
-		this.price = price;
-		this.pageSize = pageSize;
-		this.publication = publication;
+		this.title=title;
+		this.author=author;
+		this.price=price;
+		this.pageSize=pageSize;
+		this.publication=publication;
 	}
-
 	/** 本のタイトル */
 	String title;
 

@@ -7,10 +7,14 @@ public class Car {
 	String color;
 	int gasoline;
 
+
 	int run() {
-
-		this.gasoline=rnd.nextInt(15);
-	return
-
+		if(this.gasoline>0) {
+			Random rnd = new Random();
+			this.gasoline--;
+			return rnd.nextInt(15)+1;
+		}else{
+			return -1;
+		}
 	}
 }
