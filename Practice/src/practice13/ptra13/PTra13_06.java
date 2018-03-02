@@ -1,5 +1,5 @@
 /*
- * PTra13_06.java
+Item= * PTra13_06.java
  *   作成	LIKEIT	2017
  *------------------------------------------------------------
  * Copyright(c) Rhizome Inc. All Rights Reserved.

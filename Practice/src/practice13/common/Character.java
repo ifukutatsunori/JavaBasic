@@ -24,6 +24,7 @@ public class Character {
 	/** 防御力 */
 	private int endurance;
 
+
 	/**
 	 * 体力、攻撃力、防御力の初期値を設定しつつ、Characterインスタンスを生成します
 	 * @param hp
@@ -75,6 +76,7 @@ public class Character {
 
 		// ダメージ分体力を減らす
 		this.hp -= calc;
+		System.out.println(this.name + ":" + this.hp);
 
 		// 体力がなくなったかどうかの判定
 		if (this.hp <= 0) {

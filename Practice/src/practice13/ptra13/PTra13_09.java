@@ -5,13 +5,12 @@
  * Copyright(c) Rhizome Inc. All Rights Reserved.
  */
 package practice13.ptra13;
-
+import practice13.common.Employee;
 public class PTra13_09 {
 
 	/*
 	 * ★ PTra13_08で作成したEmployeeクラスを使用します
 	 */
-
 	/** 名前データ（定数） */
 	public static final String[] NAMEDATA = {"山田", "佐藤", "小林"};
 
@@ -34,6 +33,13 @@ public class PTra13_09 {
 	public static void main(String[] args) {
 
 		// ★ 定数で定義されている各データを使用して、Employeeインスタンスを３つ作成してください
+		Employee[] emp=new Employee[3];
+		for(int i=0;i<emp.length;i++) {
+			emp[i]=NAMEDATA[i];
+			emp[i]=MAILDATA[i];
+			emp[i]=PASSDATA[i];
+			emp[i]=QUATERDATA[i];
 
+		}
 	}
 }
