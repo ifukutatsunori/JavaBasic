@@ -22,7 +22,7 @@ public class PTra13_09 {
 
 	/** 部署データ（定数） */
 	public static final String[][] QUATERDATA = {
-														{"総務部","業務部","システム部"},
+														{"総務部","業務部","シテム部"},
 														{"5","10","35"},
 													};
 
@@ -33,13 +33,20 @@ public class PTra13_09 {
 	public static void main(String[] args) {
 
 		// ★ 定数で定義されている各データを使用して、Employeeインスタンスを３つ作成してください
-		Employee[] emp=new Employee[3];
-		for(int i=0;i<emp.length;i++) {
-			emp[i]=NAMEDATA[i];
-			emp[i]=MAILDATA[i];
-			emp[i]=PASSDATA[i];
-			emp[i]=QUATERDATA[i];
+			Employee[] emp=new Employee[3];
+	for(int i=0;i<emp.length;i++) {
+			emp[i]=new Employee();
+			emp[i].setUserNm(NAMEDATA[i]);
+			emp[i].setMail(MAILDATA[i]);
+			emp[i].setPassword(PASSDATA[i]);
+			emp[i].setDepartmentNm(QUATERDATA[0][i]);
+			emp[i].setDepartmentCnt(Integer.parseInt(QUATERDATA[1][i]));
 
+			System.out.println(emp[i].getUserNm());
+			System.out.println(emp[i].getMail());
+			System.out.println(emp[i].getPassword());
+			System.out.println(emp[i].getDepartmentNm());
+			System.out.println(emp[i].getDepartmentCnt());
 		}
 	}
 }

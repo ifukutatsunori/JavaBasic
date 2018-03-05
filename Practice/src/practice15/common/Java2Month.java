@@ -12,7 +12,7 @@ public class Java2Month extends Room {
 	 * カリキュラムを取得します
 	 * @return	カリキュラム一覧を格納した配列
 	 */
-	public String[] getCurriculum() {
+	public  String[] getCurriculum() {
 
 		String[] array = {
 				"ビジネスマナー"
