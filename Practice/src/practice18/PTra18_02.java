@@ -6,6 +6,13 @@
  */
 package practice18;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import practice18.entity.Player;
+
 public class PTra18_02 {
 
 	/*
@@ -31,10 +38,36 @@ public class PTra18_02 {
 		 * ★ file/BestElevenCandidate.csvの内容を取得し、１行毎にPlayerインスタンスに情報を格納してください
 		 * ★ ArrayListを作成して、Playerインスタンスを格納してください
 		 */
+		ArrayList<Player>array=new ArrayList<Player>();
+
+		 try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
+	            while (scanner.hasNext()) {
+
+	            	Player player=new Player();
+	                String line =scanner.nextLine();
+	                String[] list =line.split(",", 0);
+	               player.setPosition(list[0]);
+	               player.setName((list[1]));
+	               player.setCountry(list[2]);
+	               player.setTeam(list[3]);
+	                // ★ 1行ごとにArrayListに格納してください
+	               array.add(player);
+
+
+	            }
+	        } catch (FileNotFoundException e) {
+	            System.out.println("ファイルが見つかりません");
+	        }
+
+			// ★ ArrayListに格納された値を全て表示してください
+			// ※ できれば拡張for文を使いましょう
+		 for(Player str:array) {
+	           System.out.println(str);
 
 
 		// ★ ArrayListに格納されているインスタンス全てのtoStringメソッドを実行し、出力してください
 		// ※ できれば拡張for文を使いましょう
-
+	           System.out.println(str.toString());
+		}
+		}
 	}
-}

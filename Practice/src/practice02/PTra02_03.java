@@ -10,9 +10,8 @@ public class PTra02_03 {
 	public static void main(String[] args) {
 		int num1=60;
 		System.out.println(num1);
-
 		// ★ 演算の評価の順番を変更して、num2に140が入るようにしてください(先に足し算が行われるよう変更)
-		int num2=(10+num1)*2;
+		int num2=20+(num1+num1);
 
 		// 140が表示されること
 		System.out.println(num2);	// ※※ この行は修正しないでください
